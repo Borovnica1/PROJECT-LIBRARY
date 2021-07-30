@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIBRARY APP</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <div class="menu__logo">
+        <a href="index.html">
+          <img src="https://img.icons8.com/nolan/64/books-1.png"/>
+          <h1>LIBRARY</h1>
+        </a>
+      </div>
+      <div class="stats">
+        
+      </div>
+      <div class="menu__btns">
+        <button class="menu__btn btn-add-book">
+          <img style="vertical-align: middle;" src="https://img.icons8.com/material-outlined/24/ffffff/plus--v1.png"/>
+           ADD BOOK</button>
+        <button class="menu__btn btn-delete-books">DELETE BOOKS</button>
+      </div>
+    </div>
+    <div class="library"></div>
+  </div>
+  <div class="overlay">
+    <div class="form">
+        <div class="input-group">
+          <label for="bname">Book Title:</label>
+          <input type="text" id="bname" name="bname">
+        </div><br>
+        <div class="input-group">
+          <label for="aname">Author Name:</label>
+          <input type="text" id="aname" name="aname">
+        </div><br>
+        <div class="input-group">
+          <label for="pages">Pages:</label>
+          <input type="number" id="pages" name="pages">
+        </div><br>
+        <div class="input-group">
+          <label for="book-read">Have you read this book?</label>
+          <select id="book-read">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div><br>
+        <button class="form-btn-add-book btn-add-book">
+          <img style="vertical-align: middle;" src="https://img.icons8.com/material-outlined/24/ffffff/plus--v1.png"/>
+           ADD BOOK</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #f8f9fa;
+}
+
+* {
+  font-family: 'Mukta', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  color: var(--primary-color);
+}
+
+body {
+  background-color:rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.container {
+  width: 60%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+.menu {
+  width: 100%;
+  height: 60px;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__logo > a > h1 {
+  color: rgb(66, 29, 199);
+}
+
+.menu__btn, .btn-add-book {
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-add-book {
+  background-color: rgba(67, 131, 214, 0.925);
+}
+
+.btn-add-book:hover {
+  background-color: rgba(60, 118, 194, 0.925);
+}
+
+.btn-delete-books {
+  background-color: rgba(209, 64, 64, 0.925);
+}
+
+.btn-delete-books:hover {
+  background-color: rgba(194, 60, 60, 0.925);
+}
+
+.menu__logo > a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.menu__logo > a > img {
+  margin-right: 1rem;
+}
+
+.library {
+  height: auto;
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 4rem;
+  column-gap: 2rem;
+}
+
+.library__book {
+  height: 300px;
+  width: auto;
+  background-color: rgba(95, 158, 160, 0.377);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.library__book * {
+  color: #8e44ad;
+}
+
+.library__book > *::selection {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.library__book > button {
+  background-color: #8e44ad;
+  padding: .2rem .6rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: .2rem;
+  color: #f8f9fa;
+}
+
+.library__title {
+  margin-top: -2rem;
+}
+
+/* specificity!! */
+.library__book .library__delete {
+  margin-top: .2rem;
+  background-color: #e40000;
+}
+
+
+.overlay {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.308);
+}
+
+.form {
+  height: fit-content;
+  margin-top: 18rem;
+  background-color: rgba(179, 192, 107, 0.788);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.form * {
+  color: #8e44ad;
+}
+
+.form .btn-add-book{
+  color: #fefbff;
+}
+
+.form .input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form input {
+  margin-left: 1rem;
+  padding: .1rem .2rem;
+  font-size: 17px;
+}
+
+.form select {
+  padding:.2rem;
+}
+
+.form input:focus, select:focus {
+  outline: none;
+}
