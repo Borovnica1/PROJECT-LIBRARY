@@ -18,10 +18,13 @@ const overlay = document.querySelector('.overlay');
 let myLibrary;
 if (storageAvailable('localStorage')) {
   // Yippee! We can use localStorage awesomeness
-  console.log('imamo storageeee', localStorage);
-  const books = JSON.parse(localStorage["books"]);
+  console.log('imamo storageeee', localStorage, localStorage["books"]);
+  let books;
+  if (localStorage["books"] !== undefined) {
+    books = JSON.parse(localStorage["books"]);
+  }
   console.log('idemo knjige', books)
-  if (books.length === 0) {
+  if (localStorage.length === 0) {
     myLibrary = [book1, book2, book3, book4];
   } else {
     myLibrary = JSON.parse(localStorage["books"]);
