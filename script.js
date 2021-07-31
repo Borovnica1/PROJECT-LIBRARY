@@ -24,7 +24,7 @@ if (storageAvailable('localStorage')) {
     books = JSON.parse(localStorage["books"]);
   }
   console.log('idemo knjige', books)
-  if (localStorage.length === 0) {
+  if (books.length === 0) {
     myLibrary = [book1, book2, book3, book4];
   } else {
     myLibrary = JSON.parse(localStorage["books"]);
