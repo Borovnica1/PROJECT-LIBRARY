@@ -22,6 +22,8 @@ if (storageAvailable('localStorage')) {
   let books;
   if (localStorage["books"] !== undefined) {
     books = JSON.parse(localStorage["books"]);
+  } else {
+    books = [];
   }
   console.log('idemo knjige', books)
   if (books.length === 0) {
