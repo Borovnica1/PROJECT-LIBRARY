@@ -1,10 +1,12 @@
-function Book(title, author, pages, hasRead = true) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.hasRead = hasRead;
+class Book {
+  constructor(title, author, pages, hasRead = true) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.hasRead = hasRead;
+  }
 
-  this.info = function() {
+  info = function() {
     return `The ${this.title} by ${this.author}, ${this.pages}, ${this.hasRead ? 'already read' : 'not read yet'}`
   } 
 }
